@@ -26,8 +26,8 @@ Installation
 
 - Create a directory .gtimelog in your home directory
 
-- Copy gtimelogrc.example to $HOME/.gtimelog/gtimelogrc and change the
-  paramaters as needed. (See also README.txt)
+- Copy orig/gtimelogrc.example to $HOME/.gtimelog/gtimelogrc and change the
+  paramaters as needed. (See also orig/README.txt)
 
 Usage
 =====
