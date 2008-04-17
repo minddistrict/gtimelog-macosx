@@ -1,0 +1,37 @@
+=======================================
+ Installation of gtimelog for Mac OS X
+=======================================
+
+Prerequisites
+=============
+
+- You need to install MacPorts from http://www.macports.org/
+
+- As gtimelog needs gtk+, lxml, setuptools and ssl-sockets, install
+  them using macports:
+
+  - sudo port install py25-gtk
+
+  - sudo port install py25-setuptools
+
+  - sudo port install py25-lxml
+
+  - sudo port install py25-socket-ssl
+
+- Note: gtk from macports needs X11.
+
+
+Installation
+============
+
+- Create a directory .gtimelog in your home directory
+
+- Copy gtimelogrc.example to $HOME/.gtimelog/gtimelogrc and change the
+  paramaters as needed. (See also README.txt)
+
+Usage
+=====
+
+- Double click on gtimelog.app to start it.
+ 
+
