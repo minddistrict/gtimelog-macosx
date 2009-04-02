@@ -15,7 +15,7 @@ Prerequisites
 
   - to install gtk+ for quartz call
 
-    sudo port install gtk2 +quartz
+    sudo port install gtk2 +no_x11
 
 - gtimelog needs some other components, install them using:
 
@@ -37,5 +37,5 @@ Usage
 =====
 
 - Double click on gtimelog.app to start it.
- 
+
 
