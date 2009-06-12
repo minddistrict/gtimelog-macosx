@@ -15,6 +15,8 @@ Prerequisites
 
   - to install gtk+ for quartz call
 
+    sudo port install cairo +no_x11+quartz
+    sudo port install pango +no_x11+quartz
     sudo port install gtk2 +no_x11
 
 - gtimelog needs some other components, install them using:
