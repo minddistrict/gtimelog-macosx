@@ -21,7 +21,13 @@ Prerequisites
 
 - gtimelog needs some other components, install them using:
 
-  sudo port install py25-gtk py25-setuptools py25-lxml py25-socket-ssl
+  python 2.5:
+
+    sudo port install py25-gtk py25-setuptools py25-lxml py25-socket-ssl
+
+  python 2.6 (Change also the path to python in gtimelogrc later on.):
+
+    sudo port install py26-gtk py26-setuptools py26-lxml
 
   (when an error is displayed that a component can't be installed, try
    the call again.)
@@ -34,6 +40,9 @@ Installation
 
 - Copy orig/gtimelogrc.example to $HOME/.gtimelog/gtimelogrc and change the
   paramaters as needed. (See also orig/README.txt)
+
+- When you use python 2.6 make sure you edit the [gtimelog.app]
+  section gtimelogrc to set the path.
 
 Usage
 =====
