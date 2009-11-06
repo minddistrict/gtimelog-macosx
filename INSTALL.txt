@@ -51,6 +51,8 @@ Installation
 
     sudo /opt/local/bin/easy_install-2.6 -f http://download.gocept.com/packages gocept.gtimelog
 
+When using python2.5 you'll need to edit the runner in "gtimelog.app/Contents/MacOS/gtimelog" manually.
+
 Usage
 =====
 
