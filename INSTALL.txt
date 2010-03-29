@@ -21,13 +21,13 @@ Prerequisites
 
 - gtimelog needs some other components, install them using:
 
-  python 2.5:
-
-    sudo port install py25-gtk py25-setuptools py25-lxml py25-socket-ssl py25-pip
-
-  python 2.6 (Change also the path to python in gtimelogrc later on.):
+  - python 2.6 (Change also the path to python in gtimelogrc later on.):
 
     sudo port install py26-gtk py26-setuptools py26-lxml py26-pip
+
+  - or python 2.5:
+
+    sudo port install py25-gtk py25-setuptools py25-lxml py25-socket-ssl py25-pip
 
   (when an error is displayed that a component can't be installed, try
    the call again.)
@@ -43,13 +43,14 @@ Installation
 
 - Install the gocept.gtimelog egg:
 
-  python 2.5:
+  - python 2.6:
+
+    sudo /opt/local/bin/easy_install-2.6 -f http://download.gocept.com/packages gocept.gtimelog
+
+  - python 2.5:
 
     sudo /opt/local/bin/easy_install-2.5 -f http://download.gocept.com/packages gocept.gtimelog
 
-  python 2.6:
-
-    sudo /opt/local/bin/easy_install-2.6 -f http://download.gocept.com/packages gocept.gtimelog
 
 When using python2.5 you'll need to edit the runner in "gtimelog.app/Contents/MacOS/gtimelog" manually.
 
@@ -58,4 +59,17 @@ Usage
 
 - Double click on gtimelog.app to start it.
 
+Update
+======
 
+- Update the gocept.gtimelog egg:
+
+  - python 2.6:
+
+    sudo /opt/local/bin/easy_install-2.6 -U -f http://download.gocept.com/packages gocept.gtimelog
+
+  - python 2.5:
+
+    sudo /opt/local/bin/easy_install-2.5 -U -f http://download.gocept.com/packages gocept.gtimelog
+
+- Restart gtimelog.app.
