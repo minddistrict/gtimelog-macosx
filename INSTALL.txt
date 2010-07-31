@@ -11,6 +11,8 @@ Prerequisites
 
   - to install it for X11 call
 
+    sudo port install cairo +x11
+    sudo port install pango +x11
     sudo port install gtk2 +x11
 
   - to install gtk+ for quartz call
@@ -31,6 +33,28 @@ Prerequisites
 
   (when an error is displayed that a component can't be installed, try
    the call again.)
+
+Switch between X11 and quartz variant
+-------------------------------------
+
+- To switch between X11 and quartz you have to install gtk+ for the
+  new variant (see above).
+
+- Uninstall the previous variant:
+
+  sudo port uninstall inactive
+
+- Then you have to uninstall the python bindings and a variant
+  dependent library:
+
+  sudo port uninstall py26-gtk py26-cairo
+  sudo port uninstall libglade2
+
+- And reinstall them
+
+  sudo port install py26-gtk
+
+- Then you can restart gtimelog which than runs using the new UI variant.
 
 
 Installation
