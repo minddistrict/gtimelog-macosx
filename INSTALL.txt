@@ -25,11 +25,11 @@ Prerequisites
 
   - python 2.6 (Change also the path to python in gtimelogrc later on.):
 
-    sudo port install py26-gtk py26-setuptools py26-lxml py26-pip
+    sudo port install py26-gtk py26-distribute py26-lxml py26-pip
 
   - or python 2.5:
 
-    sudo port install py25-gtk py25-setuptools py25-lxml py25-socket-ssl py25-pip
+    sudo port install py25-gtk py25-distribute py25-lxml py25-socket-ssl py25-pip
 
   (when an error is displayed that a component can't be installed, try
    the call again.)
