@@ -19,13 +19,13 @@ Prerequisites
 
     sudo port install cairo +no_x11+quartz
     sudo port install pango +no_x11+quartz
-    sudo port install gtk2 +no_x11
+    sudo port install gtk2 +no_x11+quartz
 
 - gtimelog needs some other components, install them using:
 
-  - python 2.6 (Change also the path to python in gtimelogrc later on.):
+  - python 2.7 (Change also the path to python in gtimelogrc later on.):
 
-    sudo port install py26-gtk py26-distribute py26-lxml py26-pip
+    sudo port install py27-gtk py27-lxml
 
   - or python 2.5:
 
@@ -67,16 +67,16 @@ Installation
 
 - Install the gocept.gtimelog egg:
 
-  - python 2.6:
+  - python 2.7:
 
-    sudo /opt/local/bin/easy_install-2.6 -f http://download.gocept.com/packages gocept.gtimelog
+    sudo /opt/local/bin/easy_install-2.7 -f http://download.gocept.com/packages gocept.gtimelog
 
   - python 2.5:
 
     sudo /opt/local/bin/easy_install-2.5 -f http://download.gocept.com/packages gocept.gtimelog
 
 
-When using python2.5 you'll need to edit the runner in "gtimelog.app/Contents/MacOS/gtimelog" manually.
+When using Python 2.5 you'll need to edit the runner in "gtimelog.app/Contents/MacOS/gtimelog" manually.
 
 Usage
 =====
@@ -88,9 +88,9 @@ Update
 
 - Update the gocept.gtimelog egg:
 
-  - python 2.6:
+  - python 2.7:
 
-    sudo /opt/local/bin/easy_install-2.6 -U -f http://download.gocept.com/packages gocept.gtimelog
+    sudo /opt/local/bin/easy_install-2.7 -U -f http://download.gocept.com/packages gocept.gtimelog
 
   - python 2.5:
 
