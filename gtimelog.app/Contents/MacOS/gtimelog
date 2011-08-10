@@ -1,2 +1,2 @@
 #!/bin/bash
-exec /opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin/gtimelog
+exec /opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/gtimelog
