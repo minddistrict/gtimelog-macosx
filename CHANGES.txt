@@ -2,9 +2,16 @@
  CHANGES
 =========
 
+2011-09-10
+==========
+
+- Updated `INSTALL.txt` to current settings required by MacPorts. Removed
+  installation hints for Python versions older than 2.7.
+
+
+
 2009-09-29
 ==========
 
-  - Made compatible with Snow Leopard (Mac OS 10.6).
-
+- Made compatible with Snow Leopard (Mac OS 10.6).
 

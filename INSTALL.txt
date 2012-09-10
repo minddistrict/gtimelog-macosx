@@ -2,57 +2,72 @@
  Installation of gtimelog for Mac OS X
 =======================================
 
+Versions
+========
+
+- Compatible with:
+
+  - Mac OS 10.6 (Snow Leopard)
+
+  - Mac OS 10.7 (Lion)
+
+
 Prerequisites
 =============
 
 - You need to install MacPorts from http://www.macports.org/
 
+- You are able to install gtimelog for Quartz (native Mac OS UI) or X11
+  where the former should be preferred because of the better integration in
+  the OS.
+
 - gtimelog needs gtk+.
 
-  - to install it for X11 call
-
-    sudo port install cairo +x11
-    sudo port install pango +x11
-    sudo port install gtk2 +x11
-
-  - to install gtk+ for quartz call
+  - To install gtk+ for Quartz call::
 
     sudo port install cairo +no_x11+quartz
     sudo port install pango +no_x11+quartz
     sudo port install gtk2 +no_x11+quartz
 
-- gtimelog needs some other components, install them using:
+  - To install it for X11 call::
 
-  - python 2.7 (Change also the path to python in gtimelogrc later on.):
+    sudo port install cairo +x11
+    sudo port install pango +x11
+    sudo port install gtk2 +x11
 
-    sudo port install py27-gtk py27-lxml
+- gtimelog needs some other components, install them (for Quartz) using::
 
-  - or python 2.5:
+     sudo port install py27-lxml 
+     sudo port install py27-gtk +quartz
 
-    sudo port install py25-gtk py25-distribute py25-lxml py25-socket-ssl py25-pip
+    resp. (for X11)::
 
-  (when an error is displayed that a component can't be installed, try
-   the call again.)
+     sudo port install py27-lxml 
+     sudo port install py27-gtk +x11
+    
 
-Switch between X11 and quartz variant
+Switch between X11 and Quartz variant
 -------------------------------------
 
-- To switch between X11 and quartz you have to install gtk+ for the
+- To switch between X11 and Quartz you have to install gtk+ for the
   new variant (see above).
 
-- Uninstall the previous variant:
+- Uninstall the previous variant::
 
   sudo port uninstall inactive
 
 - Then you have to uninstall the python bindings and a variant
-  dependent library:
+  dependent library::
 
-  sudo port uninstall py27-gtk py27-cairo
-  sudo port uninstall libglade2
+  sudo port uninstall py27-gtk py27-cairo libglade2
 
-- And reinstall them
+- And reinstall them (Quartz)::
 
-  sudo port install py27-gtk
+    sudo port install py27-gtk +quartz
+
+  resp. (X11)::
+
+    sudo port install py27-gtk +x11
 
 - Then you can restart gtimelog which than runs using the new UI variant.
 
@@ -71,12 +86,8 @@ Installation
 
     sudo /opt/local/bin/easy_install-2.7 -f http://download.gocept.com/packages gocept.gtimelog
 
-  - python 2.5:
-
-    sudo /opt/local/bin/easy_install-2.5 -f http://download.gocept.com/packages gocept.gtimelog
-
-
-When using Python 2.5 you'll need to edit the runner in "gtimelog.app/Contents/MacOS/gtimelog" manually.
+When using another Python (e. g. virtualenv) you need to edit the runner in
+"gtimelog.app/Contents/MacOS/gtimelog" to point to your Python.
 
 Usage
 =====
@@ -91,9 +102,5 @@ Update
   - python 2.7:
 
     sudo /opt/local/bin/easy_install-2.7 -U -f http://download.gocept.com/packages gocept.gtimelog
-
-  - python 2.5:
-
-    sudo /opt/local/bin/easy_install-2.5 -U -f http://download.gocept.com/packages gocept.gtimelog
 
 - Restart gtimelog.app.
