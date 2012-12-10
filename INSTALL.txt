@@ -37,14 +37,16 @@ Prerequisites
 
 - gtimelog needs some other components, install them (for Quartz) using::
 
-     sudo port install py27-lxml 
+     sudo port install py27-lxml
+     sudo port install py27-cairo -x11
      sudo port install py27-gtk +quartz
 
-    resp. (for X11)::
+  resp. (for X11)::
 
-     sudo port install py27-lxml 
+     sudo port install py27-lxml
+     sudo port install py27-cairo +x11
      sudo port install py27-gtk +x11
-    
+
 
 Switch between X11 and Quartz variant
 -------------------------------------
@@ -63,10 +65,12 @@ Switch between X11 and Quartz variant
 
 - And reinstall them (Quartz)::
 
+    sudo port install py27-cairo -x11
     sudo port install py27-gtk +quartz
 
   resp. (X11)::
 
+    sudo port install py27-cairo +x11
     sudo port install py27-gtk +x11
 
 - Then you can restart gtimelog which than runs using the new UI variant.
