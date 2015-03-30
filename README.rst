@@ -5,12 +5,9 @@
 Versions
 ========
 
-- Compatible with:
+- Compatible with Mac OS 10.6 (Snow Leopard) to Mac OS 10.10 (Yosemite)
 
-  - Mac OS 10.6 (Snow Leopard)
-
-  - Mac OS 10.7 (Lion)
-
+- Currently only used and tested with Mac OS 10.10!
 
 Prerequisites
 =============
