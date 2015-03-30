@@ -41,17 +41,15 @@ Prerequisites
 Switch between X11 and Quartz variant
 -------------------------------------
 
-- To switch between X11 and Quartz you have to install gtk+ for the
-  new variant (see above).
+- To switch between X11 and Quartz you have to install gtk+ for the new variant (see above).
 
 - Uninstall the previous variant::
 
-  sudo port uninstall inactive
+   sudo port uninstall inactive
 
-- Then you have to uninstall the python bindings and a variant
-  dependent library::
+- Then you have to uninstall the python bindings and a variant  dependent library::
 
-  sudo port uninstall py27-gtk py27-cairo libglade2
+   sudo port uninstall py27-gtk py27-cairo libglade2
 
 - And reinstall them (Quartz)::
 
@@ -76,9 +74,9 @@ Installation
 
 - Install the gocept.gtimelog egg:
 
-  - python 2.7:
+  - python 2.7::
 
-    sudo /opt/local/bin/easy_install-2.7 -f http://download.gocept.com/packages gocept.gtimelog
+     sudo /opt/local/bin/easy_install-2.7 -f http://download.gocept.com/packages gocept.gtimelog
 
 When using another Python (e. g. virtualenv) you need to edit the runner in
 "gtimelog.app/Contents/MacOS/gtimelog" to point to your Python.
@@ -93,8 +91,8 @@ Update
 
 - Update the gocept.gtimelog egg:
 
-  - python 2.7:
+  - python 2.7::
 
-    sudo /opt/local/bin/easy_install-2.7 -U -f http://download.gocept.com/packages gocept.gtimelog
+     sudo /opt/local/bin/easy_install-2.7 -U -f http://download.gocept.com/packages gocept.gtimelog
 
 - Restart gtimelog.app.
