@@ -20,30 +20,23 @@ Prerequisites
 
 - gtimelog needs gtk+.
 
-  - To install gtk+ for Quartz call::
+  - To install gtk+ and the other needed components for Quartz call::
 
       sudo port install cairo +no_x11+quartz
       sudo port install pango +no_x11+quartz
       sudo port install gtk2 +no_x11+quartz
+      sudo port install py27-lxml
+      sudo port install py27-cairo -x11
+      sudo port install py27-gtk +quartz
 
-  - To install it for X11 call::
+  - To install gtk+ and the other needed components for X11 call::
 
       sudo port install cairo +x11
       sudo port install pango +x11
       sudo port install gtk2 +x11
-
-- gtimelog needs some other components, install them (for Quartz) using::
-
-     sudo port install py27-lxml
-     sudo port install py27-cairo -x11
-     sudo port install py27-gtk +quartz
-
-  resp. (for X11)::
-
-     sudo port install py27-lxml
-     sudo port install py27-cairo +x11
-     sudo port install py27-gtk +x11
-
+      sudo port install py27-lxml
+      sudo port install py27-cairo +x11
+      sudo port install py27-gtk +x11
 
 Switch between X11 and Quartz variant
 -------------------------------------
