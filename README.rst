@@ -27,7 +27,7 @@ Prerequisites
       sudo port install gtk2 +no_x11+quartz
       sudo port install py27-lxml
       sudo port install py27-cairo -x11
-      sudo port install py27-gtk +quartz
+      sudo port install py27-pygtk +quartz
 
   - To install gtk+ and the other needed components for X11 call::
 
@@ -36,7 +36,7 @@ Prerequisites
       sudo port install gtk2 +x11
       sudo port install py27-lxml
       sudo port install py27-cairo +x11
-      sudo port install py27-gtk +x11
+      sudo port install py27-pygtk +x11
 
 Switch between X11 and Quartz variant
 -------------------------------------
