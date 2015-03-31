@@ -1,2 +1,6 @@
 #!/bin/bash
-exec /opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/gtimelog
+if [ -z "$GTIMELOG_PATH" ] ; then
+	GTIMELOG_PATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/gtimelog
+fi
+
+exec $GTIMELOG_PATH
