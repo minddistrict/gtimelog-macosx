@@ -16,11 +16,12 @@ Prerequisites
 
 - You are able to install gtimelog for Quartz (native Mac OS UI) or X11
   where the former should be preferred because of the better integration in
-  the OS.
+  the OS:
 
-- gtimelog needs gtk+.
+Prerequisites for the Quartz variant
+--------------------------------------------
 
-  - To install gtk+ and the other needed components for Quartz call::
+To install gtk+ and the other needed components for Quartz call::
 
       sudo port install cairo +no_x11+quartz
       sudo port install pango +no_x11+quartz
@@ -29,7 +30,10 @@ Prerequisites
       sudo port install py27-cairo -x11
       sudo port install py27-pygtk +quartz
 
-  - To install gtk+ and the other needed components for X11 call::
+Prerequisites for the X11 variant
+--------------------------------------------
+
+To install gtk+ and the other needed components for X11 call::
 
       sudo port install cairo +x11
       sudo port install pango +x11
@@ -72,32 +76,49 @@ Installation
 - Copy orig/gtimelogrc.example to $HOME/.gtimelog/gtimelogrc and change the
   paramaters as needed. (See also orig/README.txt)
 
-- Install the gocept.gtimelog egg globally:
+- There are at least two variants to install the needed ``gocept.gtimelog`` package:
 
-  - python 2.7::
+  - globally
+
+  - locally as source checkout
+
+Global installation
+------------------------
+
+To install  ``gocept.gtimelog`` globally call::
 
      sudo /opt/local/bin/easy_install-2.7 -f http://download.gocept.com/packages gocept.gtimelog
 
-- or install it in a virtualenv (as source checkout)::
+Local installation as source checkout
+------------------------
+
+- To install ``gocept.gtimelog`` locally as source checkout you need a virtualenv::
 
    /opt/local/bin/virtualenv-2.7 --system-site-packages gtimelog
    cd gtimelog
    bin/pip install -e hg+ssh://hg@bitbucket.org/gocept/gocept.gtimelog#egg=gocept.gtimelog
+
+- The source checkout is ``gtimelog/src/gocept.gtimelog``.
   
-   In this case you need to edit the runner in "gtimelog.app/Contents/MacOS/gtimelog" to point to your Python.
+- You need to set the environment variable ``GTIMELOG_PATH`` to ``<absolute path of gtimelog virtualenv>/bin/gtimelog`` as described on Stackoverflow_.
+
+.. _Stackoverflow : http://stackoverflow.com/questions/135688/setting-environment-variables-in-os-x
 
 Usage
 =====
 
 - Double click on gtimelog.app to start it.
 
-Update
+Update global installation
 ======
 
-- Update the gocept.gtimelog egg:
-
-  - python 2.7::
+To update the global ``gocept.gtimelog`` installation call::
 
      sudo /opt/local/bin/easy_install-2.7 -U -f http://download.gocept.com/packages gocept.gtimelog
 
-- Restart gtimelog.app.
+Than restart gtimelog.app.
+
+Update local source checkout
+======
+
+Go to ``gtimelog/src/gocept.gtimelog`` (this is inside the created virtualenv) and call ``hg pull -u`` there.
