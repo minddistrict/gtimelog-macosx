@@ -72,14 +72,19 @@ Installation
 - Copy orig/gtimelogrc.example to $HOME/.gtimelog/gtimelogrc and change the
   paramaters as needed. (See also orig/README.txt)
 
-- Install the gocept.gtimelog egg:
+- Install the gocept.gtimelog egg globally:
 
   - python 2.7::
 
      sudo /opt/local/bin/easy_install-2.7 -f http://download.gocept.com/packages gocept.gtimelog
 
-When using another Python (e. g. virtualenv) you need to edit the runner in
-"gtimelog.app/Contents/MacOS/gtimelog" to point to your Python.
+- or install it in a virtualenv (as source checkout)::
+
+   /opt/local/bin/virtualenv-2.7 --system-site-packages gtimelog
+   cd gtimelog
+   bin/pip install -e hg+ssh://hg@bitbucket.org/gocept/gocept.gtimelog#egg=gocept.gtimelog
+  
+   In this case you need to edit the runner in "gtimelog.app/Contents/MacOS/gtimelog" to point to your Python.
 
 Usage
 =====
