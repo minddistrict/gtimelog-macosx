@@ -76,31 +76,27 @@ Installation
 - Copy orig/gtimelogrc.example to $HOME/.gtimelog/gtimelogrc and change the
   paramaters as needed. (See also orig/README.txt)
 
-- There are at least two variants to install the needed ``gocept.gtimelog`` package:
+- Create a virtualenv for the python installed above with all installed
+  libraries::
 
-  - globally
+    /opt/local/bin/virtualenv-2.7 --system-site-packages gtimelog
 
-  - locally as source checkout
+- To use a released version get the latest release of ``gocept.gtimelog`` from
+   http://download.gocept.com/packages, extract it and change into the newly
+   created directory.
 
-Global installation
-------------------------
+- To use a source checkout clone the repository from
+   ssh://hg@bitbucket.org/gocept/gocept.gtimelog and change into the directory
+   of the checkout.
 
-To install  ``gocept.gtimelog`` globally call::
+- Install the dependencies::
 
-     sudo /opt/local/bin/easy_install-2.7 -f http://download.gocept.com/packages gocept.gtimelog
+    <Path to gtimelog virtualenv>/bin/python bootstrap.py
+    bin/buildout
 
-Local installation as source checkout
-------------------------
-
-- To install ``gocept.gtimelog`` locally as source checkout you need a virtualenv::
-
-   /opt/local/bin/virtualenv-2.7 --system-site-packages gtimelog
-   cd gtimelog
-   bin/pip install -e hg+ssh://hg@bitbucket.org/gocept/gocept.gtimelog#egg=gocept.gtimelog
-
-- The source checkout is ``gtimelog/src/gocept.gtimelog``.
-  
-- You need to set the environment variable ``GTIMELOG_PATH`` to ``<absolute path of gtimelog virtualenv>/bin/gtimelog`` as described on Stackoverflow_.
+- Set the environment variable ``GTIMELOG_PATH`` to
+  ``<absolute path of gtimelog directory>/bin/gtimelog`` as described on
+  Stackoverflow_.
 
 .. _Stackoverflow : http://stackoverflow.com/questions/135688/setting-environment-variables-in-os-x
 
@@ -109,16 +105,15 @@ Usage
 
 - Double click on gtimelog.app to start it.
 
-Update global installation
-======
+Update released version installation
+====================================
 
-To update the global ``gocept.gtimelog`` installation call::
+Get the new version from http://download.gocept.com/packages an install it as described above. Than restart gtimelog.app.
 
-     sudo /opt/local/bin/easy_install-2.7 -U -f http://download.gocept.com/packages gocept.gtimelog
+Update source checkout
+======================
 
-Than restart gtimelog.app.
+Go to directory where you checked out ``gocept.gtimelog`` and then call::
 
-Update local source checkout
-======
-
-Go to ``gtimelog/src/gocept.gtimelog`` (this is inside the created virtualenv) and call ``hg pull -u`` there.
+    hg pull -u
+    bin/buildout
