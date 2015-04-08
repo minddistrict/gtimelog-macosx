@@ -95,10 +95,14 @@ Installation
     bin/buildout
 
 - Set the environment variable ``GTIMELOG_PATH`` to
-  ``<absolute path of gtimelog directory>/bin/gtimelog`` as described on
-  Stackoverflow_.
+  ``<absolute path of gtimelog directory>/bin/gtimelog``.
+
+  - for Mavericks (10.9): see Stackoverflow_
+
+  - for Yosemite (10.10): see Stackexchange_
 
 .. _Stackoverflow : http://stackoverflow.com/questions/135688/setting-environment-variables-in-os-x
+.. _Stackexchange : http://apple.stackexchange.com/questions/106355/setting-the-system-wide-path-environment-variable-in-mavericks
 
 Usage
 =====
