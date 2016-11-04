@@ -21,6 +21,8 @@ Prerequisites
 Prerequisites for the Quartz variant
 --------------------------------------------
 
+Install XQuartz (https://www.xquartz.org).
+
 To install gtk+ and the other needed components for Quartz call::
 
       sudo port install cairo +no_x11+quartz
@@ -29,6 +31,8 @@ To install gtk+ and the other needed components for Quartz call::
       sudo port install py27-lxml
       sudo port install py27-cairo -x11
       sudo port install py27-pygtk +quartz
+      sudo port install py27-virtualenv
+      sudo port install curl-ca-bundle
 
 Prerequisites for the X11 variant
 --------------------------------------------
@@ -41,6 +45,8 @@ To install gtk+ and the other needed components for X11 call::
       sudo port install py27-lxml
       sudo port install py27-cairo +x11
       sudo port install py27-pygtk +x11
+      sudo port install py27-virtualenv
+      sudo port install curl-ca-bundle
 
 Switch between X11 and Quartz variant
 -------------------------------------
@@ -100,6 +106,11 @@ Installation
   - for Mavericks (10.9): see Stackoverflow_
 
   - for Yosemite (10.10): see Stackexchange_
+
+- Create an application shortcut
+
+    mkdir -p /Applications/gtimelog.app/Contents/MacOS
+    ln -s  <Path to gtimelog virtualenv>/bin/gtimelog /Applications/gtimelog.app/Contents/MacOS/gtimelog
 
 .. _Stackoverflow : http://stackoverflow.com/questions/135688/setting-environment-variables-in-os-x
 .. _Stackexchange : http://apple.stackexchange.com/questions/106355/setting-the-system-wide-path-environment-variable-in-mavericks
