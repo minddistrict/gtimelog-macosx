@@ -5,9 +5,9 @@
 Versions
 ========
 
-- Compatible with Mac OS 10.6 (Snow Leopard) to Mac OS 10.11 (El Capitan)
+- Compatible with Mac OS 10.6 (Snow Leopard) to Mac OS 10.14 (Mojave)
 
-- Currently only used and tested with Mac OS 10.11!
+- Currently only used and tested with Mac OS 10.14!
 
 Prerequisites
 =============
@@ -27,6 +27,7 @@ To install gtk+ and the other needed components for Quartz call::
 
       sudo port install cairo +no_x11+quartz
       sudo port install pango +no_x11+quartz
+      sudo port install glib2 +quartz
       sudo port install gtk2 +no_x11+quartz
       sudo port install py27-lxml
       sudo port install py27-cairo -x11
@@ -42,6 +43,7 @@ To install gtk+ and the other needed components for X11 call::
       sudo port install cairo +x11
       sudo port install pango +x11
       sudo port install gtk2 +x11
+      sudo port install glib2 +x11
       sudo port install py27-lxml
       sudo port install py27-cairo +x11
       sudo port install py27-pygtk +x11
