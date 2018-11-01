@@ -7,7 +7,7 @@
 
 - Move code to bitbucket.org.
 
-- Allow to set path to gTimelog via environement instead of changing a file in
+- Allow to set path to gTimelog via environment instead of changing a file in
   the project. (See README.rst)
 
 
