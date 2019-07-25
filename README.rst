@@ -25,15 +25,14 @@ Install XQuartz (https://www.xquartz.org).
 
 To install gtk+ and the other needed components for Quartz call::
 
+      sudo port install glib2 +quartz
       sudo port install cairo +no_x11+quartz
       sudo port install pango +no_x11+quartz
-      sudo port install glib2 +quartz
       sudo port install gtk2 +no_x11+quartz
       sudo port install py27-lxml
       sudo port install py27-cairo -x11
       sudo port install py27-pygtk +quartz
       sudo port install py27-virtualenv
-      sudo port install curl-ca-bundle
 
 Prerequisites for the X11 variant
 --------------------------------------------
@@ -88,6 +87,8 @@ Installation
   libraries::
 
     /opt/local/bin/virtualenv-2.7 --system-site-packages gtimelog
+    cd gtimelog
+    bin/pip install zc.buildout
 
 - To use a released version get the latest release of ``gocept.gtimelog`` from
    http://download.gocept.com/packages, extract it and change into the newly
@@ -99,8 +100,7 @@ Installation
 
 - Install the dependencies::
 
-    <Path to gtimelog virtualenv>/bin/python bootstrap.py
-    bin/buildout
+    <Path to gtimelog virtualenv>/bin/buildout
 
 - Set the environment variable ``GTIMELOG_PATH`` to
   ``<absolute path of gtimelog directory>/bin/gtimelog``.
@@ -120,7 +120,7 @@ Installation
 Usage
 =====
 
-- Double click on gtimelog.app to start it.
+- Double click on gtimelog.app in /Applications to start it.
 
 Update released version installation
 ====================================
