@@ -95,12 +95,12 @@ Installation
    created directory.
 
 - To use a source checkout clone the repository from
-   ssh://hg@bitbucket.org/gocept/gocept.gtimelog and change into the directory
+   https://github.com/gocept/gocept.gtimelog.git and change into the directory
    of the checkout.
 
 - Install the dependencies::
 
-    <Path to gtimelog virtualenv>/bin/buildout
+    ../bin/buildout
 
 - Set the environment variable ``GTIMELOG_PATH`` to
   ``<absolute path of gtimelog directory>/bin/gtimelog``.
@@ -108,6 +108,8 @@ Installation
   - for Mavericks (10.9): see Stackoverflow_
 
   - for Yosemite (10.10): see Stackexchange_
+
+  - as an example see the file ``my.gtimelog.plist`` right beside this README.
 
 - Create an application shortcut
 
