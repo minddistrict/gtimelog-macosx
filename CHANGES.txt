@@ -29,4 +29,3 @@
 ==========
 
 - Made compatible with Snow Leopard (Mac OS 10.6).
-
