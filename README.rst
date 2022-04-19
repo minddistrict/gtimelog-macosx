@@ -7,21 +7,36 @@ Versions
 
 - Compatible with Mac OS 10.6 (Snow Leopard) to Mac OS 10.14 (Mojave)
 
-- Currently only used and tested with Mac OS 10.14!
+- Currently only used and tested with Mac OS 12.3!
 
 Prerequisites
 =============
 
 - You need to install MacPorts from http://www.macports.org/
 
-- You are able to install gtimelog for Quartz (native Mac OS UI) or X11
-  where the former should be preferred because of the better integration in
-  the OS:
+- You are able to install gtimelog in three variants:
+
+    - gtimelog3 (gtk3)
+    - Quartz (native Mac OS UI)
+    - X11
+
+The variants are listed from most preferred to least.
+
+Prerequisites for the gtimelog3 variant
+---------------------------------------
+
+To install gtk3 and the other needed components for gtimelog3 call::
+
+      sudo port install libsoup
+      sudo port install libsecret
+      sudo port install adwaita-icon-theme
+      sudo port install pango +no_x11+quartz
+      sudo port install gtk3 +quartz
+      ...
+
 
 Prerequisites for the Quartz variant
---------------------------------------------
-
-Install XQuartz (https://www.xquartz.org).
+------------------------------------
 
 To install gtk+ and the other needed components for Quartz call::
 
@@ -35,7 +50,9 @@ To install gtk+ and the other needed components for Quartz call::
       sudo port install py27-virtualenv
 
 Prerequisites for the X11 variant
---------------------------------------------
+---------------------------------
+
+Install XQuartz (https://www.xquartz.org).
 
 To install gtk+ and the other needed components for X11 call::
 
