@@ -29,7 +29,7 @@ repos:
       - id: bandit
         args: ["--skip=B314,B405,B406,B410"]
     - repo: https://github.com/PyCQA/isort
-      rev: 5.10.1
+      rev: 5.11.1
       hooks:
       - id: isort
         args: [--filter-files]
