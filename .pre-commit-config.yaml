@@ -13,7 +13,7 @@ repos:
             language_version: python3
           - id: check-json
     - repo: https://github.com/PyCQA/pydocstyle
-      rev: 6.2.0
+      rev: 6.2.3
       hooks:
           - id: pydocstyle
             name: pydocstyle (application)
