@@ -19,7 +19,7 @@ repos:
             name: pydocstyle (application)
             args: ["--convention=pep257", "--add-ignore=D100,D104,D107"]
             language_version: python3
-    - repo: https://github.com/pre-commit/mirrors-autopep8
+    - repo: https://github.com/hhatto/autopep8
       rev: v2.0.4
       hooks:
           - id: autopep8
