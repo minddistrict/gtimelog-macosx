@@ -42,7 +42,16 @@ Installation
 
   - as an example see the file ``contrib/my.gtimelog.plist``.
 
-- To use VS Code as editor, copy:
+- To use VS Code as editor (new way), you
+
+  - have to use https://github.com/gtimelog/gtimelog/pull/246
+
+  - ``sudo port install dconf``
+
+  - ``dconf write /org/gtimelog/editor '"open -a Visual\\\\ Studio\\\\ Code.app %s"'``
+    (The four slashes are important.)
+
+- To use VS Code as editor (old way), copy:
 
   - ``contrib/vscode.desktop`` to ``~/.local/share/applications``
 
