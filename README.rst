@@ -1,6 +1,6 @@
-=======================================
- Installation of gtimelog for Mac OS X
-=======================================
+====================================
+ Installation of gtimelog for Mac OS
+====================================
 
 Purpose
 =======
@@ -17,7 +17,10 @@ Versions
 Prerequisites
 =============
 
-- You need to install MacPorts from http://www.macports.org/
+MacPorts
+--------
+
+- You need to install MacPorts from https://www.macports.org/
 
 - To install gtk3 and the other needed components call::
 
@@ -29,6 +32,21 @@ Prerequisites
       sudo port install gtimelog
 
 - Otherwise install it using a Git clone and ``pip install .``.
+
+Homebrew
+--------
+
+- You need to install Homebrew from https://brew.sh/
+
+- To install gtk3 and the other needed components call::
+
+      brew install gtk+3
+      brew install gobject-introsprection
+      brew install libsoup
+      brew install libsecret
+
+- Install `gtimelog`` using a Git clone and ``pip install .``.
+
 
 Installation
 ============
@@ -48,7 +66,7 @@ Installation
 
   - as an example see the file ``contrib/my.gtimelog.plist``.
 
-- To use VS Code as editor (new way), you
+- To use VS Code as editor (new way, MacPorts), you
 
   - have to use https://github.com/gtimelog/gtimelog/pull/246
 
@@ -56,6 +74,12 @@ Installation
 
   - ``dconf write /org/gtimelog/editor '"open -a Visual\\\\ Studio\\\\ Code.app %s"'``
     (The four slashes are important.)
+
+- To use VS Code as editor (new way, Homebrew), you
+
+  - have to use https://github.com/gtimelog/gtimelog/pull/246
+
+  - Change the default app in MacOS for text files to VS Code.
 
 - To use VS Code as editor (old way), copy:
 
@@ -75,16 +99,3 @@ Usage
 =====
 
 - Double click on gtimelog.app in /Applications to start it.
-
-Update released version installation
-====================================
-
-Get the new version from http://download.gocept.com/packages an install it as described above. Than restart gtimelog.app.
-
-Update source checkout
-======================
-
-Go to directory where you checked out ``gocept.gtimelog`` and then call::
-
-    hg pull -u
-    bin/buildout
