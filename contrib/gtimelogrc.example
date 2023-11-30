@@ -1,0 +1,15 @@
+# Example configuration file for GTimeLog
+# Place it in ~/.gtimelog/gtimelogrc
+
+[gtimelog]
+# Your name in activity reports
+name = Anonymous
+
+# Email to send activity reports to
+list-email = activity@example.com
+
+# How many hours work in a day.
+hours = 8
+
+# When does one work day end and another begin
+virtual_midnight = 02:00
