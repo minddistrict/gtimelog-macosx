@@ -22,7 +22,13 @@ Prerequisites
 - To install gtk3 and the other needed components call::
 
       sudo port install gtk3 +quartz
+      sudo port install libsecret
+
+- To use the last released version use::
+
       sudo port install gtimelog
+
+- Otherwise install it using a Git clone and ``pip install .``.
 
 Installation
 ============
