@@ -25,7 +25,7 @@ MacPorts
 - To install gtk3 and the other needed components call::
 
       sudo port install gtk3 +quartz
-      sudo port install libsecret
+      sudo port install libsecret libsoup dconf
 
 - To use the last released version use::
 
