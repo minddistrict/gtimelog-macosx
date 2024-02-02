@@ -54,6 +54,8 @@ Installation
 - Copy ``contrib/gtimelogrc.example`` to ``$HOME/.gtimelog/gtimelogrc`` and change the
   parameters as needed.
 
+- Git clone this repositry as it containts the MacOS app.
+
 - If you are not using the ``gtimelog`` executable from
   ``/opt/local/bin/gtimelog`` you have to set the environment variable
   ``GTIMELOG_PATH`` to ``<absolute path of gtimelog directory>/bin/gtimelog``:
