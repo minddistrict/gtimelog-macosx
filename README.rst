@@ -27,12 +27,6 @@ MacPorts
       sudo port install gtk3 +quartz
       sudo port install libsecret libsoup dconf
 
-- To use the last released version use::
-
-      sudo port install gtimelog
-
-- Otherwise install it using a Git clone and ``pip install .``.
-
 Homebrew
 --------
 
@@ -45,11 +39,15 @@ Homebrew
       brew install libsoup
       brew install libsecret
 
-- Install `gtimelog`` using a Git clone and ``pip install .``.
-
 
 Installation
 ============
+
+- Do a git clone of https://github.com/minddistrict/gtimelog.
+
+- Switch to the branch ``develop``.
+
+- Install it using ``pip install .``.
 
 - Create a directory ``.gtimelog`` in your home directory
 
